@@ -41,14 +41,14 @@ template<class T>
     / >() \>()
 */
 
-// Hàm rút gọn hai phân số bằng cách chia tử và mẫu cho ước chung lớn nhất
+// Hàm rút gọn hai phân số bằng cách chia tử và mẫu cho ước chung lớn nhất (Đầu vào tử số và mẫu số, đầu ra là kqua phân số được rút gọc)
 void reduceFraction(int& numerator, int& denominator) {
     int commonDivisor = __gcd(numerator, denominator);
     numerator /= commonDivisor;
     denominator /= commonDivisor;
 }
 
-// Hàm so sánh hai phân số và tìm phân số lớn hơn bằng cách sử dụng phép nhân chéo
+// Hàm so sánh hai phân số và tìm phân số lớn hơn bằng cách sử dụng phép nhân chéo (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua phân số lớn hơn)
 void compareFractions(int n1, int d1, int n2, int d2, int& n_max, int& d_max) {
     if (n1 * d2 > n2 * d1) {
         n_max = n1;
@@ -59,28 +59,28 @@ void compareFractions(int n1, int d1, int n2, int d2, int& n_max, int& d_max) {
     }
 }
 
-// Hàm cộng hai phân số
-void addFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) {
+// Hàm cộng hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua tổng của hai phân số)
+void addFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) { 
     num_result = n1 * d2 + n2 * d1;
     denom_result = d1 * d2;
     reduceFraction(num_result, denom_result);
 }
 
-// Hàm trừ hai phân số
+// Hàm trừ hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua hiệu của hai phân số)
 void subtractFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) {
     num_result = n1 * d2 - n2 * d1;
     denom_result = d1 * d2;
     reduceFraction(num_result, denom_result);
 }
 
-// Hàm nhân hai phân số
+// Hàm nhân hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua tích của hai phân số)
 void multiplyFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) {
     num_result = n1 * n2;
     denom_result = d1 * d2;
     reduceFraction(num_result, denom_result);
 }
 
-// Hàm chia hai phân số
+// Hàm chia hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua thương của hai phân số)
 void divideFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) {
     if (n2 == 0) {
         std::cerr << "Error: Division by zero" << std::endl;
@@ -91,7 +91,7 @@ void divideFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom
     reduceFraction(num_result, denom_result);
 }
 
-// Hàm kiểm tra mẫu số khác phải khác 0 để phân số xác định
+// Hàm kiểm tra mẫu số khác phải khác 0 để phân số xác định (Đầu vào tử số và mẫu số, đầu ra là kqua mẫu khác không)
 bool isValidFraction(int n, int d) {
     return d != 0;
 }
