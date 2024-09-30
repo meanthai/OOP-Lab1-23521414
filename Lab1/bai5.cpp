@@ -46,12 +46,12 @@ struct Date {
     int year;
 };
 
-// Kiểm tra năm nhuận chia hết cho 4 và 100
+// Kiểm tra năm nhuận chia hết cho 4 và 100 (đầu vào là năm, đầu ra là kết quả năm nhuận)
 bool isLeapYear(int year) {
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
-// Số ngày trong từng tháng để chia trường hợp nhằm tính toán chính xác
+// Số ngày trong từng tháng để chia trường hợp nhằm tính toán chính xác (đầu vào là tháng và năm, đầu ra là số ngày trong tháng và năm đó)
 int daysInMonth(int month, int year) {
     switch (month) {
         case 1: case 3: case 5: case 7: case 8: case 10: case 12:
@@ -65,13 +65,13 @@ int daysInMonth(int month, int year) {
     }
 }
 
-// Kiểm tra tính hợp lệ của ngày tháng năm nhập vào
+// Kiểm tra tính hợp lệ của ngày tháng năm nhập vào (đầu vào là ngày, đầu ra là kqua hợp lệ)
 bool isValidDate(Date date) {
     return date.year > 0 && date.month >= 1 && date.month <= 12 && 
            date.day >= 1 && date.day <= daysInMonth(date.month, date.year);
 }
 
-// Tìm ngày kế tiếp bằng cách xét các điều kiện
+// Tìm ngày kế tiếp bằng cách xét các điều kiện (đầu vào là ngày, đầu ra là kqua ngày kế tiếp)
 Date nextDay(Date date) {
     date.day++;
     if (date.day > daysInMonth(date.month, date.year)) {
@@ -85,7 +85,7 @@ Date nextDay(Date date) {
     return date;
 }
 
-// Tìm ngày trước bằng cách xét các điều kiện
+// Tìm ngày trước bằng cách xét các điều kiện (đầu vào là ngày, đầu ra là kqua ngày trước đó)
 Date previousDay(Date date) {
     date.day -= 1;
     if (date.day <= 0) {
@@ -99,7 +99,7 @@ Date previousDay(Date date) {
     return date;
 }
 
-// Tính ngày thứ bao nhiêu trong năm
+// Tính ngày thứ bao nhiêu trong năm (đầu vào là ngày, đầu ra là kqua ngày thứ bao nhiêu trong năm)
 int dayOfYear(Date date) {
     int dayCount = 0;
     for (int m = 1; m < date.month; m++) {
@@ -109,7 +109,7 @@ int dayOfYear(Date date) {
     return dayCount;
 }
 
-// Hàm xử lý chính input và các functions khác
+// Hàm xử lý chính input và các functions khác 
 void process5() {
     Date date;
     cout << "Enter date (day month year)-(dd mm yyyy): " << endl;
