@@ -35,11 +35,6 @@ template<class T>
         return (x < 0 ? -x : x);
     }
 
-///
-
-// Author : Hoang Minh Thai (just call me Fred Hoang).
-// User's name : meanthai (available on all platforms).
-// countdown 0 days before the national exam for the gifted - VOI.
 /*
      /\_/\
     (  ._.)
