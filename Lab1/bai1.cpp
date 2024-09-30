@@ -16,12 +16,12 @@ using namespace std;
     / >() \>()
 */
 
-// Hàm kiểm tra mẫu số khác không để tồn tại phân số
-bool isValidFraction(int n, int d) {
+// Hàm kiểm tra mẫu số khác không để tồn tại phân số (Đầu vào tử số và mẫu số, đầu ra là kqua mẫu khác không)
+bool isValidFraction(int n, int d) { 
     return d != 0;
 }
 
-// Hàm tính ước chung lớn nhất bằng function __gcd()
+// Hàm tính ước chung lớn nhất bằng function __gcd() (Đầu vào tử số và mẫu số, đầu ra là kqua ước chung lớn nhất)
 int calculateGCD(int a, int b){
     int tmp = __gcd(a, b);
     return tmp;
