@@ -44,7 +44,8 @@ void process1()
     }
     int GCDvalue = calculateGCD(a, b);
 
-    cout << a / GCDvalue << '/' << b / GCDvalue << endl;
+    cout << "Phan so da duoc rut gon la: " << a / GCDvalue << '/' << b / GCDvalue << endl;
+
     return;
 }
 
