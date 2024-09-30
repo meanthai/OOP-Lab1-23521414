@@ -99,16 +99,16 @@ bool isValidFraction(int n, int d) {
 // Hàm xử lý input chính và các functions ở trên
 void process3(){
     int a, b, c, d;
-    cout << "nhap phan so thu nhat: a / b" << endl;
+    cout << "- Nhap phan so thu nhat: a / b" << endl;
     cin >> a >> b;
     if (!isValidFraction(a, b)) {
-        cout << "phan so thu nhat khong hop le!" << endl;
+        cout << "(*) Phan so thu nhat khong hop le!" << endl;
         return;
     }
-    cout << "nhap phan so thu nhat: c / d" << endl;
+    cout << "- Nhap phan so thu nhai: c / d" << endl;
     cin >> c >> d;
     if (!isValidFraction(c, d)) {
-        cout << "phan so thu hai khong hop le!" << endl;
+        cout << "(*) Phan so thu hai khong hop le!" << endl;
         return;
     }
     reduceFraction(a, b);
@@ -116,16 +116,16 @@ void process3(){
 
     int n_res, d_res;
     addFractions(a, b, c, d, n_res, d_res);
-    cout << "Tong cua hai phan so la: " << n_res << '/' << d_res << endl;
+    cout << "-> Tong cua hai phan so la: " << n_res << '/' << d_res << endl;
 
     subtractFractions(a, b, c, d, n_res, d_res);
-    cout << "Hieu cua hai phan so la: " << n_res << '/' << d_res << endl;
+    cout << "-> Hieu cua hai phan so la: " << n_res << '/' << d_res << endl;
 
     multiplyFractions(a, b, c, d, n_res, d_res);
-    cout << "Tich cua hai phan so la: " << n_res << '/' << d_res << endl;
+    cout << "-> Tich cua hai phan so la: " << n_res << '/' << d_res << endl;
 
     divideFractions(a, b, c, d, n_res, d_res);
-    cout << "Thuong cua hai phan so la: " << n_res << '/' << d_res << endl;
+    cout << "-> Thuong cua hai phan so la: " << n_res << '/' << d_res << endl;
 }
 
 int main()
