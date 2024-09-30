@@ -1,1 +1,286 @@
+*Test case 1: 
+*Input:
+'''
+Enter the number of savings books:
+2
+- Enter information for savings book 1:
++) Enter book code (maximum 5 characters): 
+VJ1234
++) Invalid book code. Please enter again: 
+VJ12
++) Enter savings type (maximum 10 characters - 'long term' or 'short term'): 
+long term
++) Enter customer's name (maximum 30 characters): 
+John123
+(*) Invalid name. Please enter again: 
+John Doe
++) Enter ID card number (9 or 12 digits): 
+123456
+(*) Invalid ID card number. Please enter again: 
+123456789
++) Enter opening date (dd/mm/yyyy): 
+30/02/2023
+(*) Invalid date. Please enter again: 
+15/02/2023
++) Enter deposit amount: 
+-500
+(*) Deposit amount must be positive. Please enter again: 
+1000
 
+- Enter information for savings book 2:
++) Enter book code (maximum 5 characters): 
+VJ567
++) Enter savings type (maximum 10 characters - 'long term' or 'short term'): 
+short term
++) Enter customer's name (maximum 30 characters): 
+Emily Green
++) Enter ID card number (9 or 12 digits): 
+987654321
++) Enter opening date (dd/mm/yyyy): 
+12/11/2022
++) Enter deposit amount: 
+5000
+
+Enter interest rate (%/year): 
+5
+Enter book code to withdraw money: 
+VJ567
+Enter amount to withdraw: 
+3000
+Enter book code or ID card to search: 
+987654321
+'''
+
+*Output:
+'''
+List of savings books:
+- Book code: VJ12, Savings type: long term, Name: John Doe, ID card: 123456789, Opening date: 15/02/2023, Deposit amount: 1000.00
+- Book code: VJ567, Savings type: short term, Name: Emily Green, ID card: 987654321, Opening date: 12/11/2022, Deposit amount: 5000.00
+
+Interest for book VJ12: 0
+Interest for book VJ567: 83.33
+
+Withdrawal successful! Remaining amount: 2000.00
+
+Search results:
+- Book code: VJ567, Savings type: short term, Name: Emily Green, ID card: 987654321, Opening date: 12/11/2022, Deposit amount: 2000.00
+
+Sort list by deposit amount descending:
+- Book code: VJ567, Savings type: short term, Name: Emily Green, ID card: 987654321, Opening date: 12/11/2022, Deposit amount: 2000.00
+- Book code: VJ12, Savings type: long term, Name: John Doe, ID card: 123456789, Opening date: 15/02/2023, Deposit amount: 1000.00
+
+Sort list by opening date ascending:
+- Book code: VJ567, Savings type: short term, Name: Emily Green, ID card: 987654321, Opening date: 12/11/2022, Deposit amount: 2000.00
+- Book code: VJ12, Savings type: long term, Name: John Doe, ID card: 123456789, Opening date: 15/02/2023, Deposit amount: 1000.00
+'''
+----------------------------------------
+*Test case 2: 
+*Input:
+'''
+Enter the number of savings books:
+1
+- Enter information for savings book 1:
++) Enter book code (maximum 5 characters): 
+BOOK@
+(*) Invalid book code. Please enter again: 
+BOOK1
++) Enter savings type (maximum 10 characters - 'long term' or 'short term'): 
+long term
++) Enter customer's name (maximum 30 characters): 
+Anne Marie
++) Enter ID card number (9 or 12 digits): 
+123
+(*) Invalid ID card number. Please enter again: 
+123456789
++) Enter opening date (dd/mm/yyyy): 
+31/04/2023
+(*) Invalid date. Please enter again: 
+30/04/2023
++) Enter deposit amount: 
+2000
+
+Enter interest rate (%/year): 
+4
+Enter book code to withdraw money: 
+BOOK1
+Enter amount to withdraw: 
+2500
+Enter book code or ID card to search: 
+BOOK1
+'''
+
+*Output:
+'''
+List of savings books:
+- Book code: BOOK1, Savings type: long term, Name: Anne Marie, ID card: 123456789, Opening date: 30/04/2023, Deposit amount: 2000.00
+
+Interest for book BOOK1: 0
+
+Withdrawal amount exceeds the amount in the book!
+
+Search results:
+- Book code: BOOK1, Savings type: long term, Name: Anne Marie, ID card: 123456789, Opening date: 30/04/2023, Deposit amount: 2000.00
+
+Sort list by deposit amount descending:
+- Book code: BOOK1, Savings type: long term, Name: Anne Marie, ID card: 123456789, Opening date: 30/04/2023, Deposit amount: 2000.00
+
+Sort list by opening date ascending:
+- Book code: BOOK1, Savings type: long term, Name: Anne Marie, ID card: 123456789, Opening date: 30/04/2023, Deposit amount: 2000.00
+'''
+----------------------------------------
+*Test case 3: 
+*Input:
+'''
+Enter the number of savings books:
+1
+- Enter information for savings book 1:
++) Enter book code (maximum 5 characters): 
+C1234
++) Enter savings type (maximum 10 characters - 'long term' or 'short term'): 
+short term
++) Enter customer's name (maximum 30 characters): 
+James Brown
++) Enter ID card number (9 or 12 digits): 
+112233445566
+(*) Invalid ID card number. Please enter again: 
+112233445
++) Enter opening date (dd/mm/yyyy): 
+29/02/2021
+(*) Invalid date. Please enter again: 
+28/02/2021
++) Enter deposit amount: 
+10000
+
+Enter interest rate (%/year): 
+3
+Enter book code to withdraw money: 
+C1234
+Enter amount to withdraw: 
+500
+Enter book code or ID card to search: 
+112233445
+'''
+
+*Output:
+'''
+List of savings books:
+- Book code: C1234, Savings type: short term, Name: James Brown, ID card: 112233445, Opening date: 28/02/2021, Deposit amount: 10000.00
+
+Interest for book C1234: 150.00
+
+You are withdrawing early! Interest rate will drop to 0.5%.
+Interest received: 25.00
+Withdrawal successful! Remaining amount: 9500.00
+
+Search results:
+- Book code: C1234, Savings type: short term, Name: James Brown, ID card: 112233445, Opening date: 28/02/2021, Deposit amount: 9500.00
+
+Sort list by deposit amount descending:
+- Book code: C1234, Savings type: short term, Name: James Brown, ID card: 112233445, Opening date: 28/02/2021, Deposit amount: 9500.00
+
+Sort list by opening date ascending:
+- Book code: C1234, Savings type: short term, Name: James Brown, ID card: 112233445, Opening date: 28/02/2021, Deposit amount: 9500.00
+'''
+----------------------------------------
+*Test case 4: 
+*Input:
+'''
+Enter the number of savings books:
+1
+- Enter information for savings book 1:
++) Enter book code (maximum 5 characters): 
+VB007
++) Enter savings type (maximum 10 characters - 'long term' or 'short term'): 
+long term
++) Enter customer's name (maximum 30 characters): 
+Chris O'Brian
++) Enter ID card number (9 or 12 digits): 
+321098765
++) Enter opening date (dd/mm/yyyy): 
+31/06/2020
+(*) Invalid date. Please enter again: 
+30/06/2020
++) Enter deposit amount: 
+-10000
+(*) Deposit amount must be positive. Please enter again: 
+15000
+
+Enter interest rate (%/year): 
+6
+Enter book code to withdraw money: 
+VB007
+Enter amount to withdraw: 
+2000
+Enter book code or ID card to search: 
+321098765
+'''
+
+*Output:
+'''
+List of savings books:
+- Book code: VB007, Savings type: long term, Name: Chris O'Brian, ID card: 321098765, Opening date: 30/06/2020, Deposit amount: 15000.00
+
+Interest for book VB007: 750.00
+
+Withdrawal successful! Remaining amount: 13000.00
+
+Search results:
+- Book code: VB007, Savings type: long term, Name: Chris O'Brian, ID card: 321098765, Opening date: 30/06/2020, Deposit amount: 13000.00
+
+Sort list by deposit amount descending:
+- Book code: VB007, Savings type: long term, Name: Chris O'Brian, ID card: 321098765, Opening date: 30/06/2020, Deposit amount: 13000.00
+
+Sort list by opening date ascending:
+- Book code: VB007, Savings type: long term, Name: Chris O'Brian, ID card: 321098765, Opening date: 30/06/2020, Deposit amount: 13000.00
+'''
+----------------------------------------
+*Test case 5: 
+*Input:
+'''
+Enter the number of savings books:
+1
+- Enter information for savings book 1:
++) Enter book code (maximum 5 characters): 
+BCDEF
++) Enter savings type (maximum 10 characters - 'long term' or 'short term'): 
+short term
++) Enter customer's name (maximum 30 characters): 
+Sophia Lee
++) Enter ID card number (9 or 12 digits): 
+987654321
++) Enter opening date (dd/mm/yyyy): 
+15/08/2019
++) Enter deposit amount: 
+3000
+
+Enter interest rate (%/year): 
+4
+Enter book code to withdraw money: 
+BCDEF
+Enter amount to withdraw: 
+500
+Enter book code or ID card to search: 
+BCDEF
+'''
+
+*Output:
+'''
+List of savings books:
+- Book code: BCDEF, Savings type: short term, Name: Sophia Lee, ID card: 987654321, Opening date: 15/08/2019, Deposit amount: 3000.00
+
+Interest for book BCDEF: 120.00
+
+You are withdrawing early! Interest rate will drop to 0.5%.
+Interest received: 15.00
+Withdrawal successful! Remaining amount: 2500.00
+
+Search results:
+- Book code: BCDEF, Savings type: short term, Name: Sophia Lee, ID card: 987654321, Opening date: 15/08/2019, Deposit amount: 2500.00
+
+Sort list by deposit amount descending:
+- Book code: BCDEF, Savings type: short term, Name: Sophia Lee, ID card: 987654321, Opening date: 15/08/2019, Deposit amount: 2500.00
+
+Sort list by opening date ascending:
+- Book code: BCDEF, Savings type: short term, Name: Sophia Lee, ID card: 987654321, Opening date: 15/08/2019, Deposit amount: 2500.00
+'''
+----------------------------------------
