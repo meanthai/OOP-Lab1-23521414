@@ -1,1 +1,41 @@
-
+*Test case 1: 
+'''
+- Nhap gia tri cua x:
+0.15164
+--> Ket qua cua ham sin(x) co gia tri la: 
+0.15106
+'''
+----------------------------------------
+*Test case 2: 
+'''
+- Nhap gia tri cua x:
+0
+--> Ket qua cua ham sin(x) co gia tri la: 
+0.00000
+'''
+----------------------------------------
+*Test case 3: 
+'''
+- Nhap gia tri cua x:
+3.14159
+--> Ket qua cua ham sin(x) co gia tri la: 
+0.00000
+'''
+----------------------------------------
+*Test case 4: 
+'''
+- Nhap gia tri cua x:
+35
+--> Ket qua cua ham sin(x) co gia tri la: 
+-0.40070
+'''
+----------------------------------------
+*Test case 5: 
+'''
+- Nhap phan so thu nhat: a / b
+151619 21616
+- Nhap phan so thu nhai: c / d
+159191 0
+(*) Phan so thu hai khong hop le!
+'''
+----------------------------------------
