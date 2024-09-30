@@ -141,58 +141,112 @@ Danh sach cac hoc sinh co ten "Van" la:
 +) Hoc sinh ten 'Hoang Van' co diem toan la: 6.0
 +) Hoc sinh ten 'Tran Bao' co diem toan la: 7.5
 +) Hoc sinh ten 'Le Phuong' co diem toan la: 9.0
-
 '''
 ----------------------------------------
 *Test case 4: 
+*Input:
 '''
-- Nhap so phan tu cua mang A: 
-7
-- Nhap so phan tu cua mang B: 
-15
-- Nhap cac phan tu cua mang A: 
-1 2 3 4 5 6 7
-- Nhap cac phan tu cua mang B: 
-1 2 1 2 3 4 5 6 7 1 2 3 4 5 6
-- So lan mang A xuat hien trong mang B la: 1
-- Mang A xuat hien tai cac vi tri sau:
-+) Vi tri thu 3
+Nhap so luong hoc sinh:
+2
++) Nhap ten cua hoc sinh thu 1:
+12345
+(*): Ten khong hop le, vui long nhap lai.
++) Nhap ten cua hoc sinh thu 1:
+Le Van An
++) Nhap diem mon toan cua hoc sinh thu 1:
+-5
+(*) Diem da nhap khong hop le, vui long nhap lai.
++) Nhap diem mon toan cua hoc sinh thu 1:
+10.5
+(*) Diem da nhap khong hop le, vui long nhap lai.
++) Nhap diem mon toan cua hoc sinh thu 1:
+9.0
++) Nhap diem mon van cua hoc sinh thu 1:
+8.0
++) Nhap diem mon tieng anh cua hoc sinh thu 1:
+7.5
++) Nhap ten cua hoc sinh thu 2:
+Phan Thi Bich
++) Nhap diem mon toan cua hoc sinh thu 2:
+8.5
++) Nhap diem mon van cua hoc sinh thu 2:
+9.5
++) Nhap diem mon tieng anh cua hoc sinh thu 2:
+11
+(*) Diem da nhap khong hop le, vui long nhap lai.
++) Nhap diem mon tieng anh cua hoc sinh thu 2:
+8.0
+Nhap ten cua hoc sinh muon tim kiem:
+Bich
+'''
+
+*Output:
+'''
+- Diem trung binh cua moi hoc sinh la: 
++) Diem trung binh cua hoc sinh ten Le Van An la: 8.38 - Xep loai: Gioi
++) Diem trung binh cua hoc sinh ten Phan Thi Bich la: 8.63 - Xep loai: Gioi
+- Hoc sinh co diem trung binh (GPA) cao nhat la: Phan Thi Bich - GPA: 8.63
+Danh sach cac hoc sinh co ten "Bich" la:
++) Hoc sinh Phan Thi Bich.
+- Danh sach hoc sinh co diem toan thap nhat la: 
++) Hoc sinh ten 'Le Van An' co diem toan la: 9.0
++) Hoc sinh ten 'Phan Thi Bich' co diem toan la: 8.5
 '''
 ----------------------------------------
 *Test case 5: 
+*Input:
 '''
-- Nhap so phan tu cua mang A: 
+Nhap so luong hoc sinh:
 3
-- Nhap so phan tu cua mang B: 
-25
-- Nhap cac phan tu cua mang A: 
-1 1 1 
-- Nhap cac phan tu cua mang B: 
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-- So lan mang A xuat hien trong mang B la: 23
-- Mang A xuat hien tai cac vi tri sau:
-+) Vi tri thu 1
-+) Vi tri thu 2
-+) Vi tri thu 3
-+) Vi tri thu 4
-+) Vi tri thu 5
-+) Vi tri thu 6
-+) Vi tri thu 7
-+) Vi tri thu 8
-+) Vi tri thu 9
-+) Vi tri thu 10
-+) Vi tri thu 11
-+) Vi tri thu 12
-+) Vi tri thu 13
-+) Vi tri thu 14
-+) Vi tri thu 15
-+) Vi tri thu 16
-+) Vi tri thu 17
-+) Vi tri thu 18
-+) Vi tri thu 19
-+) Vi tri thu 20
-+) Vi tri thu 21
-+) Vi tri thu 22
-+) Vi tri thu 23
++) Nhap ten cua hoc sinh thu 1:
+Nguyen Van A
++) Nhap diem mon toan cua hoc sinh thu 1:
+11
+(*) Diem da nhap khong hop le, vui long nhap lai.
++) Nhap diem mon toan cua hoc sinh thu 1:
+7.5
++) Nhap diem mon van cua hoc sinh thu 1:
+5
++) Nhap diem mon tieng anh cua hoc sinh thu 1:
+9
++) Nhap ten cua hoc sinh thu 2:
+Hoa
++) Nhap diem mon toan cua hoc sinh thu 2:
+-1
+(*) Diem da nhap khong hop le, vui long nhap lai.
++) Nhap diem mon toan cua hoc sinh thu 2:
+8
++) Nhap diem mon van cua hoc sinh thu 2:
+9
++) Nhap diem mon tieng anh cua hoc sinh thu 2:
+10
++) Nhap ten cua hoc sinh thu 3:
+123abc
+(*): Ten khong hop le, vui long nhap lai.
++) Nhap ten cua hoc sinh thu 3:
+Le Thi D
++) Nhap diem mon toan cua hoc sinh thu 3:
+9.5
++) Nhap diem mon van cua hoc sinh thu 3:
+8.5
++) Nhap diem mon tieng anh cua hoc sinh thu 3:
+7.5
+Nhap ten cua hoc sinh muon tim kiem:
+Van
+'''
+
+*Output:
+'''
+- Diem trung binh cua moi hoc sinh la: 
++) Diem trung binh cua hoc sinh ten Nguyen Van A la: 7.25 - Xep loai: Kha
++) Diem trung binh cua hoc sinh ten Hoa la: 9.00 - Xep loai: Xuat sac
++) Diem trung binh cua hoc sinh ten Le Thi D la: 8.75 - Xep loai: Gioi
+- Hoc sinh co diem trung binh (GPA) cao nhat la: Hoa - GPA: 9.00
+Danh sach cac hoc sinh co ten "Van" la:
++) Hoc sinh Nguyen Van A.
+- Danh sach hoc sinh co diem toan thap nhat la: 
++) Hoc sinh ten 'Nguyen Van A' co diem toan la: 7.5
++) Hoc sinh ten 'Hoa' co diem toan la: 8.0
++) Hoc sinh ten 'Le Thi D' co diem toan la: 9.5
 '''
 ----------------------------------------
