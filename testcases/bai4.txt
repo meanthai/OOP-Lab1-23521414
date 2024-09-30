@@ -32,10 +32,9 @@
 ----------------------------------------
 *Test case 5: 
 '''
-- Nhap phan so thu nhat: a / b
-151619 21616
-- Nhap phan so thu nhai: c / d
-159191 0
-(*) Phan so thu hai khong hop le!
+- Nhap gia tri cua x:
+-32
+--> Ket qua cua ham sin(x) co gia tri la: 
+0.00000
 '''
 ----------------------------------------
