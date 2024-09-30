@@ -16,7 +16,7 @@ using namespace std;
     / >() \>()
 */
 
-// Tính toán hàm số sin(x) theo công thức của đề bài với sai số xấp xỉ nhỏ hơn 0.00001
+// Tính toán hàm số sin(x) theo công thức của đề bài với sai số xấp xỉ nhỏ hơn 0.00001 (Đầu vào là giá trị x, đầu ra là kqua hàm sin(x))
 double calculate(double x){
     double sinx = 0, n = 0, sign = 1.0, tmp = 1.0 * x;
     while(!(tmp < 0.00001)){
