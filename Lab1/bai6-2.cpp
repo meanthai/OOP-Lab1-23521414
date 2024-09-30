@@ -11,6 +11,12 @@ const ll inf = 1e9 + 7;
 const ll base = 7013;
 using namespace std;
 
+/*
+     /\_/\
+    (  ._.)
+    / >() \>()
+*/
+
 // Object Student và các attributes để lưu trữ thông tin
 struct Student {
     string name;
