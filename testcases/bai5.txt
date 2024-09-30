@@ -1,1 +1,43 @@
-
+*Test case 1: 
+'''
+- Enter date (day month year)-(dd mm yyyy): 
+23 10 2005
+-> The next day: 24/10/2005
+-> The previous day: 22/10/2005
+-> This is the 296th day in the year.
+'''
+----------------------------------------
+*Test case 2: 
+'''
+- Enter date (day month year)-(dd mm yyyy): 
+199 199 23
+(*) Invalid date!
+'''
+----------------------------------------
+*Test case 3: 
+'''
+- Enter date (day month year)-(dd mm yyyy): 
+28 2 2024
+-> The next day: 29/02/2024
+-> The previous day: 27/02/2024
+-> This is the 59th day in the year.
+'''
+----------------------------------------
+*Test case 4: 
+'''
+- Enter date (day month year)-(dd mm yyyy): 
+31 12 2023
+-> The next day: 01/01/2024
+-> The previous day: 30/12/2023
+-> This is the 365th day in the year.
+'''
+----------------------------------------
+*Test case 5: 
+'''
+- Enter date (day month year)-(dd mm yyyy): 
+29 2 2020
+-> The next day: 01/03/2020
+-> The previous day: 28/02/2020
+-> This is the 60th day in the year.
+'''
+----------------------------------------
