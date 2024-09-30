@@ -1,1 +1,198 @@
+*Test case 1: 
+*Input:
+'''
+Nhap so luong hoc sinh:
+3
++) Nhap ten cua hoc sinh thu 1:
+Lan Phuong
++) Nhap diem mon toan cua hoc sinh thu 1:
+8.5
++) Nhap diem mon van cua hoc sinh thu 1:
+7.5
++) Nhap diem mon tieng anh cua hoc sinh thu 1:
+9.0
++) Nhap ten cua hoc sinh thu 2:
+Nguyen Hieu
++) Nhap diem mon toan cua hoc sinh thu 2:
+6.0
++) Nhap diem mon van cua hoc sinh thu 2:
+7.0
++) Nhap diem mon tieng anh cua hoc sinh thu 2:
+6.5
++) Nhap ten cua hoc sinh thu 3:
+Phan Minh
++) Nhap diem mon toan cua hoc sinh thu 3:
+9.5
++) Nhap diem mon van cua hoc sinh thu 3:
+8.0
++) Nhap diem mon tieng anh cua hoc sinh thu 3:
+9.0
+Nhap ten cua hoc sinh muon tim kiem:
+Minh
+'''
 
+*Output:
+'''
+- Diem trung binh cua moi hoc sinh la: 
++) Diem trung binh cua hoc sinh ten Lan Phuong la: 8.38 - Xep loai: Gioi
++) Diem trung binh cua hoc sinh ten Nguyen Hieu la: 6.38 - Xep loai: Kha
++) Diem trung binh cua hoc sinh ten Phan Minh la: 9.00 - Xep loai: Xuat sac
+- Hoc sinh co diem trung binh (GPA) cao nhat la: Phan Minh - GPA: 9.00
+Danh sach cac hoc sinh co ten "Minh" la:
++) Hoc sinh Phan Minh.
+- Danh sach hoc sinh co diem toan thap nhat la: 
++) Hoc sinh ten 'Nguyen Hieu' co diem toan la: 6.0
++) Hoc sinh ten 'Lan Phuong' co diem toan la: 8.5
++) Hoc sinh ten 'Phan Minh' co diem toan la: 9.5
+'''
+----------------------------------------
+*Test case 2: 
+*Input:
+'''
+Nhap so luong hoc sinh:
+2
++) Nhap ten cua hoc sinh thu 1:
+Tran Thanh
++) Nhap diem mon toan cua hoc sinh thu 1:
+7.0
++) Nhap diem mon van cua hoc sinh thu 1:
+8.0
++) Nhap diem mon tieng anh cua hoc sinh thu 1:
+7.5
++) Nhap ten cua hoc sinh thu 2:
+Hoang Hanh
++) Nhap diem mon toan cua hoc sinh thu 2:
+5.0
++) Nhap diem mon van cua hoc sinh thu 2:
+6.0
++) Nhap diem mon tieng anh cua hoc sinh thu 2:
+5.5
+Nhap ten cua hoc sinh muon tim kiem:
+Hoang
+
+'''
+
+*Output:
+'''
+- Diem trung binh cua moi hoc sinh la: 
++) Diem trung binh cua hoc sinh ten Tran Thanh la: 7.38 - Xep loai: Kha
++) Diem trung binh cua hoc sinh ten Hoang Hanh la: 5.38 - Xep loai: Trung binh
+- Hoc sinh co diem trung binh (GPA) cao nhat la: Tran Thanh - GPA: 7.38
+Danh sach cac hoc sinh co ten "Hoang" la:
++) Hoc sinh Hoang Hanh.
+- Danh sach hoc sinh co diem toan thap nhat la: 
++) Hoc sinh ten 'Hoang Hanh' co diem toan la: 5.0
++) Hoc sinh ten 'Tran Thanh' co diem toan la: 7.0
+'''
+----------------------------------------
+*Test case 3: 
+*Input:
+'''
+Nhap so luong hoc sinh:
+4
++) Nhap ten cua hoc sinh thu 1:
+Nguyen Nam
++) Nhap diem mon toan cua hoc sinh thu 1:
+4.5
++) Nhap diem mon van cua hoc sinh thu 1:
+5.5
++) Nhap diem mon tieng anh cua hoc sinh thu 1:
+6.0
++) Nhap ten cua hoc sinh thu 2:
+Le Phuong
++) Nhap diem mon toan cua hoc sinh thu 2:
+9.0
++) Nhap diem mon van cua hoc sinh thu 2:
+8.5
++) Nhap diem mon tieng anh cua hoc sinh thu 2:
+8.0
++) Nhap ten cua hoc sinh thu 3:
+Tran Bao
++) Nhap diem mon toan cua hoc sinh thu 3:
+7.5
++) Nhap diem mon van cua hoc sinh thu 3:
+7.0
++) Nhap diem mon tieng anh cua hoc sinh thu 3:
+8.0
++) Nhap ten cua hoc sinh thu 4:
+Hoang Van
++) Nhap diem mon toan cua hoc sinh thu 4:
+6.0
++) Nhap diem mon van cua hoc sinh thu 4:
+6.5
++) Nhap diem mon tieng anh cua hoc sinh thu 4:
+7.0
+Nhap ten cua hoc sinh muon tim kiem:
+Van
+'''
+
+*Output:
+'''
+- Diem trung binh cua moi hoc sinh la: 
++) Diem trung binh cua hoc sinh ten Nguyen Nam la: 5.38 - Xep loai: Trung binh
++) Diem trung binh cua hoc sinh ten Le Phuong la: 8.63 - Xep loai: Gioi
++) Diem trung binh cua hoc sinh ten Tran Bao la: 7.50 - Xep loai: Kha
++) Diem trung binh cua hoc sinh ten Hoang Van la: 6.38 - Xep loai: Kha
+- Hoc sinh co diem trung binh (GPA) cao nhat la: Le Phuong - GPA: 8.63
+Danh sach cac hoc sinh co ten "Van" la:
++) Hoc sinh Hoang Van.
+- Danh sach hoc sinh co diem toan thap nhat la: 
++) Hoc sinh ten 'Nguyen Nam' co diem toan la: 4.5
++) Hoc sinh ten 'Hoang Van' co diem toan la: 6.0
++) Hoc sinh ten 'Tran Bao' co diem toan la: 7.5
++) Hoc sinh ten 'Le Phuong' co diem toan la: 9.0
+
+'''
+----------------------------------------
+*Test case 4: 
+'''
+- Nhap so phan tu cua mang A: 
+7
+- Nhap so phan tu cua mang B: 
+15
+- Nhap cac phan tu cua mang A: 
+1 2 3 4 5 6 7
+- Nhap cac phan tu cua mang B: 
+1 2 1 2 3 4 5 6 7 1 2 3 4 5 6
+- So lan mang A xuat hien trong mang B la: 1
+- Mang A xuat hien tai cac vi tri sau:
++) Vi tri thu 3
+'''
+----------------------------------------
+*Test case 5: 
+'''
+- Nhap so phan tu cua mang A: 
+3
+- Nhap so phan tu cua mang B: 
+25
+- Nhap cac phan tu cua mang A: 
+1 1 1 
+- Nhap cac phan tu cua mang B: 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+- So lan mang A xuat hien trong mang B la: 23
+- Mang A xuat hien tai cac vi tri sau:
++) Vi tri thu 1
++) Vi tri thu 2
++) Vi tri thu 3
++) Vi tri thu 4
++) Vi tri thu 5
++) Vi tri thu 6
++) Vi tri thu 7
++) Vi tri thu 8
++) Vi tri thu 9
++) Vi tri thu 10
++) Vi tri thu 11
++) Vi tri thu 12
++) Vi tri thu 13
++) Vi tri thu 14
++) Vi tri thu 15
++) Vi tri thu 16
++) Vi tri thu 17
++) Vi tri thu 18
++) Vi tri thu 19
++) Vi tri thu 20
++) Vi tri thu 21
++) Vi tri thu 22
++) Vi tri thu 23
+'''
+----------------------------------------
