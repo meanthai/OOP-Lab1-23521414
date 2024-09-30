@@ -1,1 +1,99 @@
-
+*Test case 1: 
+'''
+- Nhap so phan tu cua mang A: 
+3
+- Nhap so phan tu cua mang B: 
+6
+- Nhap cac phan tu cua mang A: 
+1 1 1
+- Nhap cac phan tu cua mang B: 
+1 1 1 1 1 1
+- So lan mang A xuat hien trong mang B la: 4
+- Mang A xuat hien tai cac vi tri sau:
++) Vi tri thu 1
++) Vi tri thu 2
++) Vi tri thu 3
++) Vi tri thu 4
+'''
+----------------------------------------
+*Test case 2: 
+'''
+- Nhap so phan tu cua mang A: 
+3
+- Nhap so phan tu cua mang B: 
+6
+- Nhap cac phan tu cua mang A: 
+1 2 1
+- Nhap cac phan tu cua mang B: 
+1 2 1 2 1 2
+- So lan mang A xuat hien trong mang B la: 2
+- Mang A xuat hien tai cac vi tri sau:
++) Vi tri thu 1
++) Vi tri thu 3
+'''
+----------------------------------------
+*Test case 3: 
+'''
+- Nhap so phan tu cua mang A: 
+3
+- Nhap so phan tu cua mang B: 
+5
+- Nhap cac phan tu cua mang A: 
+1 1 1
+- Nhap cac phan tu cua mang B: 
+2 2 2 2 2
+- So lan mang A xuat hien trong mang B la: 0
+'''
+----------------------------------------
+*Test case 4: 
+'''
+- Nhap so phan tu cua mang A: 
+7
+- Nhap so phan tu cua mang B: 
+15
+- Nhap cac phan tu cua mang A: 
+1 2 3 4 5 6 7
+- Nhap cac phan tu cua mang B: 
+1 2 1 2 3 4 5 6 7 1 2 3 4 5 6
+- So lan mang A xuat hien trong mang B la: 1
+- Mang A xuat hien tai cac vi tri sau:
++) Vi tri thu 3
+'''
+----------------------------------------
+*Test case 5: 
+'''
+- Nhap so phan tu cua mang A: 
+3
+- Nhap so phan tu cua mang B: 
+25
+- Nhap cac phan tu cua mang A: 
+1 1 1 
+- Nhap cac phan tu cua mang B: 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+- So lan mang A xuat hien trong mang B la: 23
+- Mang A xuat hien tai cac vi tri sau:
++) Vi tri thu 1
++) Vi tri thu 2
++) Vi tri thu 3
++) Vi tri thu 4
++) Vi tri thu 5
++) Vi tri thu 6
++) Vi tri thu 7
++) Vi tri thu 8
++) Vi tri thu 9
++) Vi tri thu 10
++) Vi tri thu 11
++) Vi tri thu 12
++) Vi tri thu 13
++) Vi tri thu 14
++) Vi tri thu 15
++) Vi tri thu 16
++) Vi tri thu 17
++) Vi tri thu 18
++) Vi tri thu 19
++) Vi tri thu 20
++) Vi tri thu 21
++) Vi tri thu 22
++) Vi tri thu 23
+'''
+----------------------------------------
