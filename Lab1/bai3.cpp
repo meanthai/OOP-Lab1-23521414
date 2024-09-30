@@ -2,10 +2,6 @@
 #include <bits/stdc++.h>
 #define fi(i,a,b) for(i=a;i<=b;i++)
 #define ll long long
-#define ff first
-#define ss second
-#define ii pair<int, int>
-#define iii pair<ll, pair<int, int>>
 #define MASK(c) (1LL << (c))
 const ll N =  1e6 + 30;
 const ll inf = 1e9 + 7;
@@ -42,14 +38,14 @@ template<class T>
 */
 
 // Hàm rút gọn hai phân số bằng cách chia tử và mẫu cho ước chung lớn nhất (Đầu vào tử số và mẫu số, đầu ra là kqua phân số được rút gọc)
-void reduceFraction(int& numerator, int& denominator) {
-    int commonDivisor = __gcd(numerator, denominator);
+void reduceFraction(long long& numerator, long long& denominator) {
+    long long commonDivisor = __gcd(numerator, denominator);
     numerator /= commonDivisor;
     denominator /= commonDivisor;
 }
 
 // Hàm so sánh hai phân số và tìm phân số lớn hơn bằng cách sử dụng phép nhân chéo (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua phân số lớn hơn)
-void compareFractions(int n1, int d1, int n2, int d2, int& n_max, int& d_max) {
+void compareFractions(long long n1, long long d1, long long n2, long long d2, long long& n_max, long long& d_max) {
     if (n1 * d2 > n2 * d1) {
         n_max = n1;
         d_max = d1;
@@ -60,28 +56,28 @@ void compareFractions(int n1, int d1, int n2, int d2, int& n_max, int& d_max) {
 }
 
 // Hàm cộng hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua tổng của hai phân số)
-void addFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) { 
+void addFractions(long long n1, long long d1, long long n2, long long d2, long long& num_result, long long& denom_result) { 
     num_result = n1 * d2 + n2 * d1;
     denom_result = d1 * d2;
     reduceFraction(num_result, denom_result);
 }
 
 // Hàm trừ hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua hiệu của hai phân số)
-void subtractFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) {
+void subtractFractions(long long n1, long long d1, long long n2, long long d2, long long& num_result, long long& denom_result) {
     num_result = n1 * d2 - n2 * d1;
     denom_result = d1 * d2;
     reduceFraction(num_result, denom_result);
 }
 
 // Hàm nhân hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua tích của hai phân số)
-void multiplyFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) {
+void multiplyFractions(long long n1, long long d1, long long n2, long long d2, long long& num_result, long long& denom_result) {
     num_result = n1 * n2;
     denom_result = d1 * d2;
     reduceFraction(num_result, denom_result);
 }
 
 // Hàm chia hai phân số (Đầu vào tử số và mẫu số cảu hai phân số input và phân số kết quả, đầu ra là kqua thương của hai phân số)
-void divideFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom_result) {
+void divideFractions(long long n1, long long d1, long long n2, long long d2, long long& num_result, long long& denom_result) {
     if (n2 == 0) {
         std::cerr << "Error: Division by zero" << std::endl;
         return;
@@ -92,13 +88,13 @@ void divideFractions(int n1, int d1, int n2, int d2, int& num_result, int& denom
 }
 
 // Hàm kiểm tra mẫu số khác phải khác 0 để phân số xác định (Đầu vào tử số và mẫu số, đầu ra là kqua mẫu khác không)
-bool isValidFraction(int n, int d) {
+bool isValidFraction(long long n, long long d) {
     return d != 0;
 }
 
 // Hàm xử lý input chính và các functions ở trên
 void process3(){
-    int a, b, c, d;
+    long long a, b, c, d;
     cout << "- Nhap phan so thu nhat: a / b" << endl;
     cin >> a >> b;
     if (!isValidFraction(a, b)) {
@@ -114,7 +110,7 @@ void process3(){
     reduceFraction(a, b);
     reduceFraction(c, d);
 
-    int n_res, d_res;
+    long long n_res, d_res;
     addFractions(a, b, c, d, n_res, d_res);
     cout << "-> Tong cua hai phan so la: " << n_res << '/' << d_res << endl;
 
@@ -136,7 +132,7 @@ int main()
     // freopen("main.inp", "r", stdin);
     // freopen("main.out", "w", stdout);
 
-    int test = 1;
+    long long test = 1;
     // cin >> test;
     while(test --) process3();
     return 0;
