@@ -13,34 +13,40 @@
 *Test case 2: 
 '''
 - Nhap phan so thu nhat: a / b
-111117 151713
-- Nhap phan so thu hai: c / d
-191715 2311171
--> Phan so lon nhat la: 191715/2311171
+151515 1212669
+- Nhap phan so thu nhai: c / d
+956814 158295
+-> Tong cua hai phan so la: 43862323833/7109608865
+-> Hieu cua hai phan so la: 42085726283/-7109608865
+-> Tich cua hai phan so la: 1073864246/1421921773
+-> Thuong cua hai phan so la: 888298775/42974025058
 '''
 ----------------------------------------
 *Test case 3: 
 '''
 - Nhap phan so thu nhat: a / b
-1 2
-- Nhap phan so thu hai: c / d
-2 4
-(*) Hai phan so bang nhau
+15 3
+- Nhap phan so thu nhai: c / d
+84545 1151536
+-> Tong cua hai phan so la: 5842225/1151536
+-> Hieu cua hai phan so la: 5673135/1151536
+-> Tich cua hai phan so la: 422725/1151536
+-> Thuong cua hai phan so la: 1151536/16909
 '''
 ----------------------------------------
 *Test case 4: 
 '''
 - Nhap phan so thu nhat: a / b
-2 0
+6 0
 (*) Phan so thu nhat khong hop le!
 '''
 ----------------------------------------
 *Test case 5: 
 '''
 - Nhap phan so thu nhat: a / b
-1 6
-- Nhap phan so thu hai: c / d
-5 0
+151619 21616
+- Nhap phan so thu nhai: c / d
+159191 0
 (*) Phan so thu hai khong hop le!
 '''
 ----------------------------------------
