@@ -67,23 +67,23 @@ void compareFractions(int n1, int d1, int n2, int d2, int& n_max, int& d_max) {
 // Hàm xử lý input chính và các functions trên
 void process2(){
     int a, b, c, d;
-    cout << "nhap phan so thu nhat: a / b" << endl;
+    cout << "- Nhap phan so thu nhat: a / b" << endl;
     cin >> a >> b;
     if (!isValidFraction(a, b)) {
-        cout << "phan so thu nhat khong hop le!" << endl;
+        cout << "(*) Phan so thu nhat khong hop le!" << endl;
         return;
     }
-    cout << "nhap phan so thu nhat: c / d" << endl;
+    cout << "- Nhap phan so thu hai: c / d" << endl;
     cin >> c >> d;
     if (!isValidFraction(c, d)) {
-        cout << "phan so thu hai khong hop le!" << endl;
+        cout << "(*) Phan so thu hai khong hop le!" << endl;
         return;
     }
     reduceFraction(a, b);
     reduceFraction(c, d);
 
     if(a == c && b == d){
-        cout << "hai phan so bang nhau" << endl;
+        cout << "(*) Hai phan so bang nhau" << endl;
         return;
     }
 
@@ -91,7 +91,7 @@ void process2(){
 
     compareFractions(a, b, c, d, n_max, d_max);
 
-    cout << "phan so lon nhat la: " << n_max << '/' << d_max << endl;
+    cout << "-> Phan so lon nhat la: " << n_max << '/' << d_max << endl;
 }
 
 int main()
