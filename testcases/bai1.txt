@@ -1,1 +1,45 @@
-
+*Test case 1: 
+'''
+nhap tu so: 
+4
+nhap mau so: 
+6
+Phan so da duoc rut gon la: 2/3
+'''
+----------------------------------------
+*Test case 2: 
+'''
+nhap tu so: 
+1468
+nhap mau so: 
+23684
+Phan so da duoc rut gon la: 367/5921
+'''
+----------------------------------------
+*Test case 3: 
+'''
+nhap tu so: 
+45
+nhap mau so: 
+0
+phan so da cho khong hop le!
+'''
+----------------------------------------
+*Test case 4: 
+'''
+nhap tu so: 
+0
+nhap mau so: 
+3
+Phan so da duoc rut gon la: 0
+'''
+----------------------------------------
+*Test case 5: 
+'''
+nhap tu so: 
+45
+nhap mau so: 
+1
+Phan so da duoc rut gon la: 45
+'''
+----------------------------------------
