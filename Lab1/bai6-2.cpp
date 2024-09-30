@@ -27,12 +27,12 @@ struct Student {
     string evaluation;
 };
 
-// Hàm dùng để xét điểm toán lớn hoặc bé hơn
+// Hàm dùng để xét điểm toán lớn hoặc bé hơn (đầu vào là hai học sinh, đầu ra là học sinh có điểm toán thấp hơn)
 bool cmp(Student x, Student y) {
     return x.math < y.math;
 }
 
-// Hàm kiểm tra điểm hợp lý
+// Hàm kiểm tra điểm hợp lý (đầu vào là điểm của học sinh, đầu ra là kiểm tra tính hợp lý)
 bool check(float x) {
     return x >= 0.0 && x <= 10.0;
 }
