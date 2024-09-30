@@ -40,19 +40,19 @@ template<class T>
     / >() \>()
 */
 
-// Hàm kiểm tra mẫu số khác 0 để tồn tại phân số
+// Hàm kiểm tra mẫu số khác 0 để tồn tại phân số (Đầu vào tử số và mẫu số, đầu ra là kqua mẫu khác không)
 bool isValidFraction(int n, int d) {
     return d != 0;
 }
 
-// Rút gọn phân số bằng cách chia tử và mẫu cho ước chung lớn nhất
+// Rút gọn phân số bằng cách chia tử và mẫu cho ước chung lớn nhất (Đầu vào tử số và mẫu số, đầu ra là kqua tử số và mẫu số được rút gọn)
 void reduceFraction(int& numerator, int& denominator) {
     int commonDivisor = __gcd(numerator, denominator);
     numerator /= commonDivisor;
     denominator /= commonDivisor;
 }
 
-// Hàm so sánh hai phân số và tìm phân số lớn hơn
+// Hàm so sánh hai phân số và tìm phân số lớn hơn (Đầu vào tử số và mẫu số của hai phân số và phân số kết quả, đầu ra là kqua phân số lớn nhất)
 void compareFractions(int n1, int d1, int n2, int d2, int& n_max, int& d_max) {
     // So sánh n1/d1 và n2/d2 bằng cách sử dụng phép nhân chéo
     if (n1 * d2 > n2 * d1) {
