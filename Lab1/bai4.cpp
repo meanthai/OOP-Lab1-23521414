@@ -32,6 +32,9 @@ double calculate(double x){
 void process4()
 {
     double x;
+    cout << "- Nhap gia tri cua x:" << endl;
+    cin >> x;
+    cout << "--> Ket qua cua ham sin(x) co gia tri la: " << endl;
     cout << fixed << setprecision(5) << calculate(x) << endl;
     return;
 }
