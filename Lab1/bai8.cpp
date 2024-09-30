@@ -50,14 +50,14 @@ struct SavingsBook {
     double depositAmount;      // Deposit amount
 };
 
-// Hàm kiểm tra tính hợp lệ của mã của sổ
+// Hàm kiểm tra tính hợp lệ của mã của sổ (đầu vào là mã sổ, đầu ra là kqua kiểm tra mã sổ hợp lệ)
 bool isValidCode(const string& code) {
     if (code.length() > 5) return false;
     for (char c : code) if (!isalnum(c)) return false; // không có kí tự đặc biệt
     return true;
 }
 
-// Hàm kiểm tra tính hợp lệ của CCCD
+// Hàm kiểm tra tính hợp lệ của CCCD (đầu vào là CCCD, đầu ra là kqua kiểm tra CCCD hợp lệ)
 bool isCCCD(const string& id) {
     if (id.length() != 9 && id.length() != 12) return false;
     for (char c : id) if (!isdigit(c)) return false; // chỉ có số
@@ -65,7 +65,7 @@ bool isCCCD(const string& id) {
     return true;
 }
 
-// Hàm kiểm tra tính hợp lệ của ngày tháng năm mở sổ 
+// Hàm kiểm tra tính hợp lệ của ngày tháng năm mở sổ (đầu vào là ngày tháng năm, đầu ra là kqua kiểm tra ngày tháng năm hợp lệ)
 bool isValidDate(const string& date) {
     int day, month, year;
     sscanf(date.c_str(), "%d/%d/%d", &day, &month, &year);
@@ -82,12 +82,12 @@ bool isValidDate(const string& date) {
     return true;
 }
 
-// Hàm kiểm tra tính hợp lệ của tiền gửi vào sổ
+// Hàm kiểm tra tính hợp lệ của tiền gửi vào sổ (đầu vào là tiền gửi tiết kiệm, đầu ra là kqua kiểm tra tiền là số dương)
 bool isValidDepositAmount(double amount) {
     return (amount > 0); // Tiền gửi ban đầu phải dương
 }
 
-// Hàm nhập input thông tin của từng sổ tiết kiệm
+// Hàm nhập input thông tin của từng sổ tiết kiệm (đầu vào là object Savingbook, đầu ra là cập nhật các thông tin của sách)
 void inputSavingsBook(SavingsBook& book) {
     cout << "+) Enter book code (maximum 5 characters): " << endl;
     cin >> book.code;
@@ -131,13 +131,13 @@ void inputSavingsBook(SavingsBook& book) {
     }
 }
 
-// Xuất ra thông tin các sổ tiết kiệm của khách hàng
+// Xuất ra thông tin các sổ tiết kiệm của khách hàng (đầu vào là object SavingsBook, đầu ra là thông tin của sách)
 void displaySavingsBook(const SavingsBook& book) {
     cout << "- Book code: " << book.code << ", Savings type: " << book.savingsType << ", Name: " << book.customerName << ", ID card: " << book.identityCard << ", Opening date: " << book.openingDate << ", Deposit amount: " 
         << fixed << setprecision(2) << book.depositAmount << endl;
 }
 
-// Hàm tính tiền lãi  tùy theo kì dài hạn, ngắn hạn
+// Hàm tính tiền lãi  tùy theo kì dài hạn, ngắn hạn (Đầu vào là object Savingsbook và lãi suất, đầu ra là tiền gửi tiết kiệm) 
 double calculateInterest(const SavingsBook& book, double interestRate) {
     struct tm tmOpening = {};
     sscanf(book.openingDate.c_str(), "%d/%d/%d", &tmOpening.tm_mday, &tmOpening.tm_mon, &tmOpening.tm_year);
@@ -153,7 +153,7 @@ double calculateInterest(const SavingsBook& book, double interestRate) {
     else return 0;
 }
 
-// Hàm thực hiện chứ năng rút tiền
+// Hàm thực hiện chứ năng rút tiền (Đầu vào là object Savingsbook và số tiền rút) 
 void withdrawMoney(SavingsBook& book, double amount) {
     if (amount > book.depositAmount) {
         cout << "Withdrawal amount exceeds the amount in the book!" << endl;
@@ -170,19 +170,19 @@ void withdrawMoney(SavingsBook& book, double amount) {
     cout << "Withdrawal successful! Remaining amount: " << book.depositAmount << endl;
 }
 
-// Tìm kiếm sổ tiết kiệm 
+// Tìm kiếm sổ tiết kiệm  (Đầu vào là object Savingsbook và từ khóa cần tìm kiếm) 
 void searchSavingsBook(const vector<SavingsBook>& books, const string& searchTerm) {
     for (const SavingsBook& book : books) {
         if (book.identityCard == searchTerm || book.code == searchTerm) displaySavingsBook(book);
     }
 }
 
-// sắp xếp theo số tiền gửi ban đầu
+// sắp xếp theo số tiền gửi ban đầu (Đầu vào là hai object Savingsbook, đầu ra là tiền gửi tiết kiệm của object nào lớn hơn) 
 bool compareByDeposit(const SavingsBook& a, const SavingsBook& b) {
     return (a.depositAmount > b.depositAmount);
 }
 
-// sắp xép theo ngày mở tài khoảng
+// sắp xép theo ngày mở tài khoảng (Đầu vào là hai object Savingsbook, đầu ra là thời điểm mở sổ tiết kiệm sớm hơn) 
 bool compareByOpeningDate(const SavingsBook& a, const SavingsBook& b) {
     struct tm tmA = {}, tmB = {};
     sscanf(a.openingDate.c_str(), "%d/%d/%d", &tmA.tm_mday, &tmA.tm_mon, &tmA.tm_year);
@@ -192,6 +192,7 @@ bool compareByOpeningDate(const SavingsBook& a, const SavingsBook& b) {
     return (mktime(&tmA) < mktime(&tmB));
 }
 
+// Kiểm tra xem mã sổ tiết kiệm có tồn tại (đầu vào là mã sổ cần tìm và vector chứa các mã sổ tiết kiệm, đầu ra là có hoặc không tồn tại mã sổ)
 bool checkExistBookCode(string withdrawCode, vector<SavingsBook> books){
     for(auto book : books) if(book.code == withdrawCode) return 1;
     return 0;
