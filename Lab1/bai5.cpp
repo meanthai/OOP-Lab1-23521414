@@ -112,27 +112,27 @@ int dayOfYear(Date date) {
 // Hàm xử lý chính input và các functions khác 
 void process5() {
     Date date;
-    cout << "Enter date (day month year)-(dd mm yyyy): " << endl;
+    cout << "- Enter date (day month year)-(dd mm yyyy): " << endl;
     cin >> date.day >> date.month >> date.year;
 
     if (!isValidDate(date)) {
-        cout << "Invalid date!" << endl;
+        cout << "(*) Invalid date!" << endl;
         return;
     }
 
     // Ngày kế tiếp
     Date next = nextDay(date);
-    cout << "The next day: " << setw(2) << setfill('0') << next.day << "/" 
+    cout << "-> The next day: " << setw(2) << setfill('0') << next.day << "/" 
          << setw(2) << setfill('0') << next.month << "/" << next.year << endl;
 
     // Ngày trước
     Date previous = previousDay(date);
-    cout << "The previous day: " << setw(2) << setfill('0') << previous.day << "/" 
+    cout << "-> The previous day: " << setw(2) << setfill('0') << previous.day << "/" 
          << setw(2) << setfill('0') << previous.month << "/" << previous.year << endl;
 
     // Ngày thứ bao nhiêu trong năm
     int dayNum = dayOfYear(date);
-    cout << "This is the " << dayNum << "th day in the year." << endl;
+    cout << "-> This is the " << dayNum << "th day in the year." << endl;
 
     return;
 }
