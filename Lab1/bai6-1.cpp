@@ -43,12 +43,12 @@ template<class T>
 
 ll powx[N], h[N]; // Khai báo mảng chứa mã Hash.
 
-// Lấy mã Hash của một đoạn trong B để so sánh
+// Lấy mã Hash của một đoạn trong B để so sánh (đầu vào là vị trí đoạn của mảng B, đầu ra là mã Hash của đoạn đó)
 ll getHash(int l, int r){
     return (h[r] - h[l-1] * powx[r - l + 1] + oo * oo) % oo;
 }
 
-// Hàm tính mã hash và duyệt các đoạn của mảng B để so sánh với mảng A
+// Hàm tính mã hash và duyệt các đoạn của mảng B để so sánh với mảng A (đầu vào hai mảng A, B và size của hai mảng, đầu ra là một mảng chứa các vị trí xuất hiện)
 vector<int> countNumberExist(const vector<int> &a, const vector<int> &b, int n, int m) {
     vector<int> pos;
 
