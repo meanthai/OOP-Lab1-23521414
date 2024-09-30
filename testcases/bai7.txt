@@ -1,1 +1,207 @@
+*Test case 1: 
+*Input:
+'''
+Enter the number of flights:
+2
+- Enter the information about the 1th flight:
++)Flight code(at most 5 characters): 
+VJ001
++)Enter departure date (dd/mm/yyyy): 
+15/12/2023
++)Enter departure time (HH:MM): 
+10:30
++)Enter departure place (at most 20 characters): 
+Hanoi
++)Enter your destination (at most 20 characters): 
+Saigon
+- Enter the information about the 2th flight:
++)Flight code(at most 5 characters): 
+VN002
++)Enter departure date (dd/mm/yyyy): 
+20/12/2023
++)Enter departure time (HH:MM): 
+15:00
++)Enter departure place (at most 20 characters): 
+Hanoi
++)Enter your destination (at most 20 characters): 
+Danang
+Enter flight code, departure place or destination to search for flights:
+Hanoi
+Enter departure place and time (dd/mm/yyyy) to get flights:
+Hanoi
+15/12/2023
+Enter departure places and destinations to count the number of flights:
+Hanoi
+Saigon
+'''
 
+*Output:
+'''
+List of flights sorted based on departure date and time:
++ Flight code: VJ001, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
++ Flight code: VN002, departure date: 20/12/2023, departure time: 15:00, departure place: Hanoi, destination: Danang
+Results:
++ Flight code: VJ001, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
++ Flight code: VN002, departure date: 20/12/2023, departure time: 15:00, departure place: Hanoi, destination: Danang
+a flight from Hanoi on 15/12/2023:
++ Flight code: VJ001, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+the number of flights from Hanoi to Saigon: 1
+'''
+----------------------------------------
+*Test case 2: 
+*Input:
+'''
+Enter the number of flights:
+1
+- Enter the information about the 1th flight:
++)Flight code(at most 5 characters): 
+VN123
++)Enter departure date (dd/mm/yyyy): 
+25/11/2023
++)Enter departure time (HH:MM): 
+14:00
++)Enter departure place (at most 20 characters): 
+Danang
++)Enter your destination (at most 20 characters): 
+Saigon
+Enter flight code, departure place or destination to search for flights:
+Saigon
+Enter departure place and time (dd/mm/yyyy) to get flights:
+Danang
+25/11/2023
+Enter departure places and destinations to count the number of flights:
+Danang
+Saigon
+'''
+
+*Output:
+'''
+List of flights sorted based on departure date and time:
++ Flight code: VN123, departure date: 25/11/2023, departure time: 14:00, departure place: Danang, destination: Saigon
+Results:
++ Flight code: VN123, departure date: 25/11/2023, departure time: 14:00, departure place: Danang, destination: Saigon
+a flight from Danang on 25/11/2023:
++ Flight code: VN123, departure date: 25/11/2023, departure time: 14:00, departure place: Danang, destination: Saigon
+the number of flights from Danang to Saigon: 1
+'''
+----------------------------------------
+*Test case 3: 
+*Input:
+'''
+Enter the number of flights:
+1
+- Enter the information about the 1th flight:
++)Flight code(at most 5 characters): 
+VJX001
+*Invalid flight code, please try again:
++)Flight code(at most 5 characters): 
+VN12
++)Enter departure date (dd/mm/yyyy): 
+15/12/2023
++)Enter departure time (HH:MM): 
+10:30
++)Enter departure place (at most 20 characters): 
+Hanoi
++)Enter your destination (at most 20 characters): 
+Saigon
+Enter flight code, departure place or destination to search for flights:
+Saigon
+Enter departure place and time (dd/mm/yyyy) to get flights:
+Hanoi
+15/12/2023
+Enter departure places and destinations to count the number of flights:
+Hanoi
+Saigon
+'''
+
+*Output:
+'''
+List of flights sorted based on departure date and time:
++ Flight code: VN12, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+Results:
++ Flight code: VN12, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+a flight from Hanoi on 15/12/2023:
++ Flight code: VN12, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+the number of flights from Hanoi to Saigon: 1
+'''
+----------------------------------------
+*Test case 4: 
+*Input:
+'''
+Enter the number of flights:
+1
+- Enter the information about the 1th flight:
++)Flight code(at most 5 characters): 
+VJ99
++)Enter departure date (dd/mm/yyyy): 
+32/12/2023
+*Invalid departure date, please try again:
++)Enter departure date (dd/mm/yyyy): 
+15/12/2023
++)Enter departure time (HH:MM): 
+10:30
++)Enter departure place (at most 20 characters): 
+Hanoi
++)Enter your destination (at most 20 characters): 
+Saigon
+Enter flight code, departure place or destination to search for flights:
+Hanoi
+Enter departure place and time (dd/mm/yyyy) to get flights:
+Hanoi
+15/12/2023
+Enter departure places and destinations to count the number of flights:
+Hanoi
+Saigon
+'''
+
+*Output:
+'''
+List of flights sorted based on departure date and time:
++ Flight code: VJ99, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+Results:
++ Flight code: VJ99, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+a flight from Hanoi on 15/12/2023:
++ Flight code: VJ99, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+the number of flights from Hanoi to Saigon: 1
+'''
+----------------------------------------
+*Test case 5: 
+*Input:
+'''
+Enter the number of flights:
+1
+- Enter the information about the 1th flight:
++)Flight code(at most 5 characters): 
+VN77
++)Enter departure date (dd/mm/yyyy): 
+15/12/2023
++)Enter departure time (HH:MM): 
+25:00
+*Invalid departure time, please try again:
++)Enter departure time (HH:MM): 
+10:30
++)Enter departure place (at most 20 characters): 
+Hanoi
++)Enter your destination (at most 20 characters): 
+Saigon
+Enter flight code, departure place or destination to search for flights:
+VN77
+Enter departure place and time (dd/mm/yyyy) to get flights:
+Hanoi
+15/12/2023
+Enter departure places and destinations to count the number of flights:
+Hanoi
+Saigon
+'''
+
+*Output:
+'''
+List of flights sorted based on departure date and time:
++ Flight code: VN77, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+Results:
++ Flight code: VN77, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+a flight from Hanoi on 15/12/2023:
++ Flight code: VN77, departure date: 15/12/2023, departure time: 10:30, departure place: Hanoi, destination: Saigon
+the number of flights from Hanoi to Saigon: 1
+'''
+----------------------------------------
